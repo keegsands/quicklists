@@ -1,9 +1,35 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Checklist</ion-title>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="success">
+    <ion-title>CHECKLIST TITLE</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/checklists"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="restartList()">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
+      <ion-button (click)="addItem()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list lines="none">
+    <!--<ion-item-sliding *ngFor="let item of checklist.items">
+      <ion-item color="success">
+        <ion-label>ITEM TITLE</ion-label>
+        <ion-checkbox color="light" [checked]="item.checked" (ionChange)="toggleItem(item)"></ion-checkbox>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="light" (click)="renameItem(item)">
+          <ion-icon slot="icon-only" name="clipboard"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="removeItem(item)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>-->
+  </ion-list>
 </ion-content>
