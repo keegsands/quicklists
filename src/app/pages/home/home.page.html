@@ -20,10 +20,10 @@
 
   <div id="container">
     <ion-list lines="none">
-      <ion-item-sliding>
-        <ion-item routerLink="/checklists/123" routerDirection="forward">
-          <ion-label>TITLE GOES HERE</ion-label>
-          <span>0 items</span>
+      <ion-item-sliding *ngFor="let checklist of checklists">
+        <ion-item routerLink="/checklists/{{checklist.id}}" routerDirection="forward">
+          <ion-label>{{ checklist.title }}</ion-label>
+          <span>{{ checklist.items.length }} items</span>
         </ion-item>
         <ion-item-options side="end">
           <ion-item-option color="light" (click)="renameChecklist(checklist)">
