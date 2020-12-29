@@ -86,7 +86,9 @@ export class ChecklistService {
       return checklist.id === checklistId ?
         {
           ...checklist, items: [...checklist.items.map((item) =>
-            item.id === itemId ? { ...item, title: newTitle } : item),],
+            item.id === itemId ?
+              { ...item, title: newTitle }
+              : item),],
         } : checklist
     });
     this.save();
