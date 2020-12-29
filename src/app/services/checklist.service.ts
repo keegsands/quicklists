@@ -82,7 +82,7 @@ export class ChecklistService {
   }
 
   updateItemInChecklist(checklistId: string, itemId: string, newTitle: string): void {
-    this.checklists.map((checklist) => {
+    this.checklists = this.checklists.map((checklist) => {
       return checklist.id === checklistId ?
         {
           ...checklist, items: [...checklist.items.map((item) =>
