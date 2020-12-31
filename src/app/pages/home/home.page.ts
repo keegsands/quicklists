@@ -24,7 +24,7 @@ export class HomePage implements OnInit {
 
   async ngOnInit() {
     const introPreviouslyShown = await this.storage.get("introShown");
-
+    //this.storage.set("introShown", null)
     if (introPreviouslyShown === null) {
       this.storage.set("introShown", true);
       this.navCtrl.navigateRoot("/intro");
