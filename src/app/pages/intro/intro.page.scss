@@ -1,0 +1,15 @@
+ion-slides {
+    height: 100%;
+    --bullet-background: var(--ion-color-light);
+    --bullet-background-active: #000;
+}
+
+ion-slide{
+    background-color: var(--ion-color-primary);
+    display: flex;
+    align-items: center;
+}
+
+ion-footer ion-button {
+    margin: 1px;
+}
